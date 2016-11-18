@@ -111,7 +111,7 @@ class HttpClient {
 
 	private static function init($url, $function_name) {
 		if (!preg_match("/^(http[s]?:\/\/[^\/]+\/)/i", $url, $match)) {
-			throw new Exception('Only Http(s) Protocal supported! Url: ' . $url);
+			throw new \Exception('Only Http(s) Protocal supported! Url: ' . $url);
 		}
 		/*
 		 * Function + Protocal + 域名 + 端口作为key，最大可能地复用TCP连接。
